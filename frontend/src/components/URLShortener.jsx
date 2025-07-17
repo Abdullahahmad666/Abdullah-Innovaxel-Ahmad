@@ -1,3 +1,22 @@
+/**
+ * URLShortener component provides a user interface for creating, updating, deleting,
+ * and retrieving shortened URLs using a backend API.
+ *
+ * Features:
+ * - Create a short URL from a long URL (POST request)
+ * - Update the original long URL for a given short code (PUT request)
+ * - Delete a short URL by its short code (DELETE request)
+ * - Retrieve the original long URL using the short code (GET request)
+ *
+ * State:
+ * - url: string - The long URL input by the user.
+ * - short: string - The generated short URL.
+ * - shortCode: string - The unique code for the short URL.
+ * - updatedUrl: string - The new URL to update the original URL.
+ * - retrievedUrl: string - The original URL retrieved from the backend.
+ *
+ * @component
+ */
 import { useState } from "react";
 import axios from "axios";
 import "./URLShortener.css";

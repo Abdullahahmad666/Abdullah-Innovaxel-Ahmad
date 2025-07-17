@@ -1,3 +1,53 @@
+/**
+ * Generates a random short code for the URL.
+ * @param {number} [length=6] - Length of the short code.
+ * @returns {string} The generated short code.
+ */
+
+/**
+ * Creates a shortened URL entry in the database.
+ * @async
+ * @function
+ * @param {import('express').Request} req - Express request object containing the original URL in the body.
+ * @param {import('express').Response} res - Express response object.
+ * @returns {Promise<void>}
+ */
+
+/**
+ * Retrieves the original URL by its short code and increments the access count.
+ * @async
+ * @function
+ * @param {import('express').Request} req - Express request object containing the short code in params.
+ * @param {import('express').Response} res - Express response object.
+ * @returns {Promise<void>}
+ */
+
+/**
+ * Updates the original URL for a given short code.
+ * @async
+ * @function
+ * @param {import('express').Request} req - Express request object containing the short code in params and new URL in body.
+ * @param {import('express').Response} res - Express response object.
+ * @returns {Promise<void>}
+ */
+
+/**
+ * Deletes a URL entry by its short code.
+ * @async
+ * @function
+ * @param {import('express').Request} req - Express request object containing the short code in params.
+ * @param {import('express').Response} res - Express response object.
+ * @returns {Promise<void>}
+ */
+
+/**
+ * Retrieves statistics for a shortened URL by its short code.
+ * @async
+ * @function
+ * @param {import('express').Request} req - Express request object containing the short code in params.
+ * @param {import('express').Response} res - Express response object.
+ * @returns {Promise<void>}
+ */
 const Url = require('../models/Url.js');
 
 function generateShortCode(length = 6) {
