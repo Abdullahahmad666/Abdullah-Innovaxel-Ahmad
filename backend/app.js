@@ -7,11 +7,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-/*const urlRoutes = require('./routes/urlRoutes');
-app.use('/shorten', urlRoutes); */
-app.get('/', (req, res) => {
-    res.send('Backend is running properly 🚀');
-});
+const urlRoutes = require('./routes/urlRoutes.js');
+app.use('/shorten', urlRoutes); 
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('MongoDB Connected'))

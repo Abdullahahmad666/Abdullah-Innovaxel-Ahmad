@@ -1,4 +1,4 @@
-const Url = require('../models/Url');
+const Url = require('../models/Url.js');
 
 function generateShortCode(length = 6) {
     return Math.random().toString(36).substring(2, 2 + length);
