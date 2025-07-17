@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-
+import "./URLShortener.css"; // Import CSS file
 
 function URLShortener() {
     const [url, setUrl] = useState("");
