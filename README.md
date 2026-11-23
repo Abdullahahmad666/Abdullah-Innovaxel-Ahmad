@@ -1,58 +1,41 @@
-URL Shortener Service
-Backend: Node.js | Frontend: React | Database: MongoDB
+# URL Shortener Service
 
-📚 Project Overview This is a simple URL Shortener Service built using:
+A full-stack URL shortener with usage statistics: shorten long links, redirect, update or delete them, and see how often each short link is opened. Built as a technical assessment for Innovaxel.
 
-Backend: Node.js + Express.js
+> The full source code is on the **`dev` branch**. `main` holds this README only, as the assessment required.
 
-Frontend: React
+## Features
+- Create a short code for any URL
+- Resolve a short code to the original URL
+- Update or delete a short link
+- Access counter and stats per link
 
-Database: MongoDB (via Mongoose)
+## API
+| Method | Endpoint | Description |
+| --- | --- | --- |
+| POST | `/shorten` | Create a short URL |
+| GET | `/shorten/:code` | Get the original URL |
+| PUT | `/shorten/:code` | Update the target URL |
+| DELETE | `/shorten/:code` | Delete a short URL |
+| GET | `/shorten/:code/stats` | Get access statistics |
 
-✅ Features: Shorten long URLs
+## Tech stack
+Node.js · Express · MongoDB (Mongoose) · React · Axios
 
-Retrieve original URLs
+## Run locally
+```bash
+git clone -b dev https://github.com/Abdullahahmad666/Abdullah-Innovaxel-Ahmad.git
+cd Abdullah-Innovaxel-Ahmad
 
-Update or delete shortened URLs
+# backend
+cd backend && npm install
+echo "MONGO_URI=your_mongodb_uri\nPORT=5000" > .env
+npm run dev            # http://localhost:5000
 
-Track how many times a shortened URL has been accessed
+# frontend (new terminal)
+cd ../frontend && npm install && npm start   # http://localhost:3000
+```
 
-🏗️ Project Structure
+---
 
-root/ ├── backend/ # Node.js + Express + MongoDB API ├── frontend/ # React-based UI for interacting with API └── README.md
-
-📥 How to Run the Project
-
-⚙️ Backend Setup cd backend npm install Create a .env file inside backend/ with this content:
-
-MONGO_URI=your_mongodb_connection_string PORT=5000 
-Run the backend server: 
-npm run dev 
-Backend runs at: http://localhost:5000/
-
-🖥️ Frontend Setup cd frontend npm install npm start Frontend runs at: http://localhost:3000/
-
-🔗 API Endpoints Method Endpoint Description 
-POST /shorten Create a short URL 
-GET /shorten/:code Retrieve the original URL 
-PUT /shorten/:code Update existing URL 
-DELETE /shorten/:code Delete a shortened URL 
-GET /shorten/:code/stats Get usage statistics
-
-🎯 Branching Strategy Branch Purpose main Only this README.md file dev Full working project code (backend & frontend)
-
-💡 How to Use Locally Clone the repository.
-
-Switch to the dev branch: git checkout dev Follow the instructions above to run the backend and frontend.
-
-👨‍💻 Developer Notes MongoDB Atlas is recommended for your database hosting.
-
-Frontend communicates with backend via Axios.
-
-📢 Submission Guidelines Followed 
-✅ main: Only README.md 
-✅ dev: Full project code (backend & frontend) 
-✅ 15+ meaningful commits 
-✅ Professional, clear commit messages
-
-🏁 Good Luck Message "Let’s innovate & excel!" — As Innovaxel says.
+**Built by [Abdullah Ahmad](https://abdullah-ahmad-portfolio.vercel.app)**, Full Stack Software Engineer in Lahore, Pakistan · [GitHub](https://github.com/Abdullahahmad666) · [LinkedIn](https://www.linkedin.com/in/abdullah-ahmad-a00913259/)
